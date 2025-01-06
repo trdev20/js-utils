@@ -1,0 +1,40 @@
+{
+  "name": "@trdev20/js-utils",
+  "description": "JavaScript utility functions",
+  "version": "0.1.4",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "jest",
+    "format": "prettier --write ./**/*.{js,jsx,ts,tsx,json,md}"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/trdev20/js-utils"
+  },
+  "keywords": [
+    "typescript",
+    "utils",
+    "helpers"
+  ],
+  "author": "Taib Rabah",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.11.24",
+    "jest": "^29.7.0",
+    "prettier": "^3.4.2",
+    "ts-jest": "^29.1.2",
+    "tsup": "^8.3.5",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@trdev20/js-utils": "link:"
+  }
+}

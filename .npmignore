@@ -1,0 +1,13 @@
+node_modules
+src
+
+.gitignore
+
+.prettierrc
+.prettierignore
+
+pnpm-lock.yaml
+
+jest.config.ts
+tsconfig.json
+tsup.config.ts
