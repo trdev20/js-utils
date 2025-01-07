@@ -17,8 +17,6 @@ describe("Path operators", () => {
     });
   });
 
-  
-
   describe("removeExtension", () => {
     it("should remove the extension from a path", () => {
       expect(removeExtension("C:/Users/John/Documents/file.txt")).toBe(

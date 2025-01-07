@@ -3,7 +3,8 @@ import { Arr } from "../types";
 /**
  * Checks if a value is an array
  */
-export const isArray = <ItemType = unknown>(value: unknown): value is Arr<ItemType> => Array.isArray(value);
+export const isArray = <ItemType = unknown>(value: unknown): value is Arr<ItemType> =>
+  Array.isArray(value);
 
 /**
  * Checks if an array is empty

@@ -2,7 +2,7 @@ export type Obj<K extends string | number | symbol = string, V = unknown> = {
   [key in K]: V;
 };
 
-export type Arr<T = unknown> = T[];
+export type Arr<T = unknown> = T[] | readonly T[];
 
 export type Valid = any;
 

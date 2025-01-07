@@ -13,7 +13,7 @@ describe("Path validators", () => {
       expect(pathsAreEqual(__dirname, __filename)).toBe(false);
     });
   });
-  
+
   describe("isDirectory", () => {
     it("should return true if the path is a directory", () => {
       expect(isDirectory(__dirname)).toBe(true);

@@ -10,8 +10,6 @@ export const forwardToBackSlash = (path: string): string => path.replace(/\//g, 
 
 export const backToForwardSlash = (path: string): string => path.replace(/\\/g, "\/");
 
-
-
 /**
  * Removes the extension from a path
  */

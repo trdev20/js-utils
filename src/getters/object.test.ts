@@ -15,7 +15,11 @@ describe("Object getters", () => {
 
   describe("entries", () => {
     it("should return correct entries", () => {
-      expect(entries({ a: 1, b: 2, c: 3 })).toEqual([["a", 1], ["b", 2], ["c", 3]]);
+      expect(entries({ a: 1, b: 2, c: 3 })).toEqual([
+        ["a", 1],
+        ["b", 2],
+        ["c", 3],
+      ]);
     });
   });
 });
