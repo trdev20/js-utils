@@ -23,3 +23,5 @@ export type Choices<T> = T | (string & {}) | (number & {});
 export type StringChoices<T extends string> = T | (string & {});
 
 export type NumberChoices<T extends number> = T | (number & {});
+
+export type VoidFn = () => void;
