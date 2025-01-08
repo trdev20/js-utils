@@ -1,39 +1,34 @@
+import { ELLIPSIS, EMPTY_STRING, SPACE } from "../constants";
+
 /**
  * Capitalizes the first letter of a string
  */
-export const upperFirst = (str: string): string => {
-  return str.charAt(0).toUpperCase() + str.slice(1);
-};
+export const upperFirst = (str: string): string => str.charAt(0).toUpperCase() + str.slice(1);
 
 /**
- * Converts a string to camelCase
+ * Capitalizes the first letter of each word in a string
  */
-export const toCamelCase = (str: string): string => {
-  return str
-    .replace(/[^a-zA-Z0-9]+(.)/g, (_, chr) => chr.toUpperCase())
-    .replace(/^[A-Z]/, (chr) => chr.toLowerCase());
-};
+export const upperFirstWord = (str: string): string => str.replace(/[a-z]+/gi, upperFirst);
 
 /**
- * Converts a string to kebab-case
+ * Lowercases the first letter of a string
  */
-export const toKebabCase = (str: string): string => {
-  return str.replace(/([a-z])([A-Z])/g, "$1-$2").toLowerCase();
-};
+export const lowerFirst = (str: string): string => str.charAt(0).toLowerCase() + str.slice(1);
 
 /**
- * Converts a string to title case
+ * Lowercases the first letter of each word in a string
  */
-export const toTitleCase = (str: string): string => {
-  return str.replace(/\w\S*/g, (txt) => txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase());
-};
+export const lowerFirstWord = (str: string): string => str.replace(/[a-z]+/gi, lowerFirst);
 
 /**
- * Truncates a string to a specified length with ellipsis
+ * Pads the start of a string with a specified text
  */
-export const truncate = (str: string, length: number): string => {
-  return length > 0 && str.length > length ? str.slice(0, length) + "..." : str;
-};
+export const padStart = (str: string, textToAdd: string): string => `${textToAdd}${str}`;
+
+/**
+ * Pads the end of a string with a specified text
+ */
+export const padEnd = (str: string, textToAdd: string): string => `${str}${textToAdd}`;
 
 /**
  * Slugifies a string (converts to URL-friendly format)
@@ -42,7 +37,7 @@ export const slugify = (str: string): string => {
   return str
     .toLowerCase()
     .trim()
-    .replace(/[^\w\s-]/g, "")
+    .replace(/[^\w\s-]/g, EMPTY_STRING)
     .replace(/[\s_-]+/g, "-")
-    .replace(/^-+|-+$/g, "");
+    .replace(/^-+|-+$/g, EMPTY_STRING);
 };
