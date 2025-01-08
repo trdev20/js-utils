@@ -1,12 +1,12 @@
 {
   "name": "@trdev20/js-utils",
   "description": "JavaScript utility functions",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsup",
+    "build": "pnpm test && tsup",
     "dev": "tsup --watch",
     "test": "jest",
     "format": "prettier --write ./**/*.{js,jsx,ts,tsx,json,md}"
